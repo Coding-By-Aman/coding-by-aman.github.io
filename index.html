@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- displays site properly based on user's device -->
+    <link href="https://fonts.googleapis.com/css2?family=Nunito+Sans&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link rel="stylesheet" href="app/scss/style.css">
+    <title>Frontend Mentor | Rest Countries API</title>
+</head>
+
+<body id="body">
+    <div id="body-content">
+        <header class="header">
+            <nav class="flex flex-jc-sb header__content" id="head-content">
+                <div class="header__title">
+                    <b style="cursor: pointer;" class="text" onclick="location.reload();">Where in the world?</b>
+                </div>
+                <div class="header__theme">
+                    <i id="moon" class="far fa-moon text"></i>
+                    <b style="cursor: pointer;" id="changeTheme" onclick="changeTheme('dark')" class="text">Dark
+                        Mode</b>
+                </div>
+            </nav>
+        </header>
+        <div id="back" class="hidden marg">
+            <a id="go-back" href="index.html"><i class="fas fa-arrow-left"></i> Back </a>
+        </div>
+        <div id="root">
+            <div class="search-and-filter">
+                <form class="search flex flex-jc-sb" action="">
+                    <div id="search-icon"><i class="fa fa-search" style="color: lightgray; margin: 12px;"></i></div>
+                    <div id="search-text"><input type="text" placeholder="  Search for a country..." id="search-input"
+                            style="font-size: 12px; margin: 12px; border: none; width: 230px; background: transparent;"
+                            onkeydown="searchForCountry()"></div>
+                </form>
+                <form action="/action_page.php" class="filter-form">
+                    <div id="filter-region"></div>
+                    <select name="region" class="text" id="region" onchange="filterByRegion()">
+                        <option hidden selected value>Filter by Region </option>
+                        <option value="africa" class="text">Africa</option>
+                        <option value="americas" class="text">Americas</option>
+                        <option value="asia" class="text">Asia</option>
+                        <option value="europe" class="text">Europe</option>
+                        <option value="oceania" class="text">Oceania</option>
+                    </select>
+                </form>
+            </div>
+        </div>
+        <script src="app/js/script.js"></script>
+</body>
+
+</html>

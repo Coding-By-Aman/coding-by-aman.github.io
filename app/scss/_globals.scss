@@ -1,0 +1,66 @@
+html {
+    font-size: 100%;
+    box-sizing: border-box;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    background: hsl(0, 0%, 98%);
+    margin: 0;
+    padding: 0;
+    line-height: 1.5;
+    font-family: "Nunito Sans", sans-serif;
+    font-size: 14px;
+    // background-color: blue;
+}
+
+.flex {
+    display: flex;
+
+    &-jc-sb {
+        justify-content: space-between;
+    }
+
+    &-jc-c {
+        justify-content: center;
+    }
+
+    &-jc-fs {
+        justify-content: flex-start;
+    }
+
+    &-ai-c {
+        align-items: center;
+    }
+
+    &-fw-sb {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+    }
+
+    &-fw-sa {
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-around;
+    }
+}
+
+input:focus,
+textarea:focus,
+select:focus {
+    outline: none;
+}
+
+.hidden {
+    visibility: hidden;
+}
+
+.visible {
+    visibility: visible;
+}
