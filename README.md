@@ -29,7 +29,8 @@ screenshot.png
 
 ### Links
 
-- Solution URL: https://github.com/Coding-By-Aman/JS/tree/rest-countries/rest-countries-api
+- Solution URL: https://github.com/Coding-By-Aman/coding-by-aman.github.io
+- Live Site URL: https://coding-by-aman.github.io/
 
 ### My process
 
