@@ -13,7 +13,7 @@ document.addEventListener("DOMContentLoaded", function (event) {
 
 function fetchAllCountries() {
     var request = new XMLHttpRequest()
-    request.open('GET', 'https://restcountries.eu/rest/v2/all', true)
+    request.open('GET', 'https://restcountries.com/v2/all', true)
     loadData(request);
     request.send()
 }
@@ -24,7 +24,7 @@ function searchForCountry() {
         fetchAllCountries();
     else {
         var request = new XMLHttpRequest()
-        request.open('GET', 'https://restcountries.eu/rest/v2/name/' + countryName, true)
+        request.open('GET', 'https://restcountries.com/v2/name/' + countryName, true)
         loadData(request)
         request.send()
     }
@@ -91,7 +91,7 @@ function filterByRegion() {
     }
     else {
         var request = new XMLHttpRequest()
-        request.open('GET', 'https://restcountries.eu/rest/v2/region/' + regionName, true)
+        request.open('GET', 'https://restcountries.com/v2/region/' + regionName, true)
         loadData(request)
         request.send()
     }
@@ -167,7 +167,7 @@ function countryInfo(country) {
     else {
         for (var i = 0; i < country.borders.length; i++) {
             var request = new XMLHttpRequest()
-            request.open('GET', 'https://restcountries.eu/rest/v2/alpha/' + country.borders[i], true)
+            request.open('GET', 'https://restcountries.com/v2/alpha/' + country.borders[i], true)
             request.onload = function () {
                 var country = JSON.parse(this.response);
 
