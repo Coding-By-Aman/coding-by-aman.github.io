@@ -156,6 +156,8 @@ function countryInfo(country) {
     aboutThis.appendChild(listRight)
 
     details.appendChild(aboutThis)
+    console.log(country.borders)
+    if (typeof country.borders !== "undefined") {
     const borders = document.createElement("h5")
     borders.textContent = `Border Countries: `
     var borderCountries = []
@@ -185,6 +187,7 @@ function countryInfo(country) {
         }
     }
     details.appendChild(borders);
+   }
     countryDiv.appendChild(details);
     if (localStorage.getItem("theme") == "light") {
         changeDetailedTheme("light");
